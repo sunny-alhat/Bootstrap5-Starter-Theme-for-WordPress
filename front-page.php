@@ -9,9 +9,8 @@
         while( have_posts() ){
 
           the_post(); // fetch the data
-
-          // load the content as per template
-          get_template_part('template-parts/content','page');
+          the_title(); // page name
+          the_content(); // actual page content
 
         }
       }
