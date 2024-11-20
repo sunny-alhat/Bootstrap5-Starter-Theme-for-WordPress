@@ -7,6 +7,9 @@
     <?php
         // Insert wp head scripts 
         wp_head();
+
+        // Header Scripts Widget
+        dynamic_sidebar('header-scripts-widget') 
     ?>
 
   </head>

@@ -58,6 +58,52 @@ add_action('wp_enqueue_scripts','bswp_register_scripts');
 
 
 /**
+ * Widget Areas
+ */
+function bswp_widget_areas() {
+    // Global Header Scripts
+    register_sidebar(
+        array(
+            'name'          => 'Header Scripts Widget (Only use HTML Block)',
+            'id'            => 'header-scripts-widget',
+            'description'   => "Use an HTML block and put your global header scripts here ex: Google Analytics",
+            'before_title'  => '',
+            'after_title'   => '',
+            'before_widget' => '',
+            'after_widget'  => ''
+        )
+    );
+
+    // Global Footer Scripts
+    register_sidebar(
+        array(
+            'name'          => 'Footer Scripts Widget (Only use HTML Block)',
+            'id'            => 'footer-scripts-widget',
+            'description'   => "Use an HTML block and put your global footer scripts here ex: Javascript",
+            'before_title'  => '',
+            'after_title'   => '',
+            'before_widget' => '',
+            'after_widget'  => ''
+        )
+    );
+
+    // Footer Copyright Widget
+    register_sidebar(
+        array(
+            'name'          => 'Footer Copyright Widget (Only use Text Block)',
+            'id'            => 'footer-copyright-widget',
+            'description'   => "Change footer's copyright statement here",
+            'before_title'  => '',
+            'after_title'   => '',
+            'before_widget' => '',
+            'after_widget'  => ''
+        )
+    );
+}
+add_action('widgets_init', 'bswp_widget_areas');
+
+
+/**
  * FILTERS MENTIONED BELOW
  */
 
