@@ -3,25 +3,31 @@
 ?>
 
   <div class="container-fluid">
-    <div class="row">
-      <?php
+    <div class="container">
 
-        if( have_posts() ){
-          while( have_posts() ){
+      <div class="row g-3">
+        <?php
 
-            //fetch the data
-            the_post(); 
+          if( have_posts() ){
+            while( have_posts() ){
 
-            // load the content as per template
-            get_template_part('template-parts/content','archive');
+              //fetch the data
+              the_post(); 
 
+              // load the content as per template
+              get_template_part('template-parts/content','archive');
+
+            }
           }
-        }
-      ?>
-    </div>
+        ?>
+      </div>
 
-    <!-- Pagination -->
-    <?= the_posts_pagination(); ?>
+      <!-- Pagination -->
+      <div class="custom-pagination mt-4">
+        <?= the_posts_pagination(); ?>
+      </div>
+      
+    </div>
   </div>
 
 <?php

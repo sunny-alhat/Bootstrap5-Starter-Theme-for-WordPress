@@ -10,6 +10,7 @@ function bswp_theme_support(){
 }
 add_action('after_setup_theme','bswp_theme_support');
 
+
 /**
  * Add menus dynamically
  */

@@ -9,3 +9,13 @@ Version: 1.0
 License: GNU General Public License v2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 */
+
+/* Navigation Bar */
+#bswp-navbar .menu-item a{
+    text-decoration: none !important;
+    padding: 4px 10px;
+    color: rgb(113, 113, 113);
+}
+#bswp-navbar .menu-item a:hover{
+    color: rgb(19, 19, 19);
+}
